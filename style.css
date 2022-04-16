@@ -1,0 +1,52 @@
+*   {
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body    {
+    background-color: rgb(27, 27, 87);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    
+}
+
+
+h1  {
+    position: relative;
+    color: rgb(27, 27, 87);
+    -webkit-text-stroke: 2px lightblue;
+
+}
+
+h1::before  {
+    content: attr(text-data);
+    position: absolute;
+    color: lightgreen;
+    top: 0px;
+    left: 0px;
+    border-right: 5px solid lightgreen;
+    -webkit-text-stroke: 2px lightgreen;
+    height: 100%;
+    width: 0%;
+    overflow: hidden;
+    animation: textAnimation 6s linear infinite;
+}
+
+
+@keyframes textAnimation {
+    0%  {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+
+}
